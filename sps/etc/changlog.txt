@@ -1,0 +1,11 @@
+//120730
+major update ver 6.1.0
+move ini.php to mylib
+
+//111205
+alter table usr add sesid varchar(32) default null;
+alter table usr add sestm bigint default 0;
+alter table usr add seson tinyint default 0;
+alter table usr modify sysaccess varchar(255);
+
+copy session.. or copy all

@@ -1,0 +1,23 @@
+//111203 - v6.0.0
+CREATE TABLE `award_staff` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `sid` tinyint(6) default '0',
+  `dt` date default NULL,
+  `tm` time default NULL,
+  `uid` varchar(32) NOT NULL,
+  `name` varchar(48) default NULL,
+  `month` varchar(32) default NULL,
+  `nomonth` tinyint default 0,
+  `year` varchar(32) default NULL,
+  `award_no` tinyint default 0,
+  `award_des` varchar(48) default NULL,
+  `adm` varchar(18) default NULL,
+  `ts` datetime default NULL,
+  index(`sid`),
+  index(`uid`),
+  index(`year`),
+   PRIMARY KEY  (`id`)
+);
+
+
+ADD ACCESS KEY=AW0; //to be able to access this modul

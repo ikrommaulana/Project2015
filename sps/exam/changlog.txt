@@ -1,0 +1,12 @@
+//25-03-2013
+
+ALTER TABLE `exam` ADD `kkm` VARCHAR( 12 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL ;
+
+ALTER TABLE `exam_stu_summary` ADD `sakit` VARCHAR( 12 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL ,
+ADD `izin` VARCHAR( 12 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL ,
+ADD `noreason` VARCHAR( 12 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL ;
+
+// 22-03-2013
+ALTER TABLE `exam` CHANGE `sub_name` `sub_name` VARCHAR( 64 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL;
+
+alter table exam add isfail tinyint default 0;

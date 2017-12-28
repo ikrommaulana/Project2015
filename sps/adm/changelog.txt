@@ -1,0 +1,30 @@
+//121208
+alter table sms_log modify tel varchar(128);
+
+//120813
+alter table sch add country varchar(48);
+alter table sch add addr1 varchar(48);
+
+
+//6.0.0
+alter table calendar_event add isreminder tinyint default 0;
+alter table calendar_event add isprivate  tinyint default 0;
+
+alter table usr add sesid varchar(32) default null;
+alter table usr add sestm bigint default 0;
+alter table usr add seson tinyint default 0;
+alter table usr modify sysaccess varchar(255);
+
+CREATE TABLE `prasyarat` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `sid` tinyint(6) DEFAULT '0',
+  `code` varchar(32) DEFAULT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `pcode` varchar(32) DEFAULT NULL,
+  `pname` varchar(32) DEFAULT NULL,
+  `adm` varchar(32) DEFAULT NULL,
+  `ts` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+alter table cls add clsrank tinyint default 0;

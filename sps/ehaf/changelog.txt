@@ -1,0 +1,93 @@
+// 18/07/13
+CREATE TABLE IF NOT EXISTS `hafaz_stu_summary` (
+  `id` int(200) NOT NULL AUTO_INCREMENT,
+  `uid` varchar(12) DEFAULT NULL,
+  `sid` tinyint(4) DEFAULT NULL,
+  `exam` varchar(16) DEFAULT NULL,
+  `year` varchar(16) DEFAULT NULL,
+  `cls` varchar(16) DEFAULT NULL,
+  `adm` varchar(32) DEFAULT NULL,
+  `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `hafaz_code` varchar(32) DEFAULT NULL,
+  `hafaz_msg` text,
+  PRIMARY KEY (`id`),
+  KEY `uid` (`uid`),
+  KEY `exam` (`exam`),
+  KEY `cls` (`cls`),
+  KEY `year` (`year`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `hafaz_exam` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dt` datetime DEFAULT '0000-00-00 00:00:00',
+  `year` varchar(16) DEFAULT NULL,
+  `sch_id` varchar(16) DEFAULT NULL,
+  `ses_id` varchar(16) DEFAULT NULL,
+  `cls_id` varchar(16) DEFAULT NULL,
+  `cls_name` varchar(32) DEFAULT NULL,
+  `cls_level` varchar(16) DEFAULT NULL,
+  `cls_code` varchar(16) DEFAULT NULL,
+  `stu_id` varchar(16) DEFAULT NULL,
+  `stu_uid` varchar(16) DEFAULT NULL,
+  `stu_ic` varchar(16) DEFAULT NULL,
+  `stu_name` varchar(64) DEFAULT NULL,
+  `usr_id` varchar(16) DEFAULT NULL,
+  `usr_uid` varchar(16) DEFAULT NULL,
+  `usr_ic` varchar(16) DEFAULT NULL,
+  `usr_name` varchar(48) DEFAULT NULL,
+  `sub_id` varchar(16) DEFAULT NULL,
+  `sub_code` varchar(16) DEFAULT NULL,
+  `sub_grp` varchar(48) DEFAULT NULL,
+  `sub_type` tinyint(4) DEFAULT NULL,
+  `sub_name` varchar(64) DEFAULT NULL,
+  `point` varchar(12) DEFAULT NULL,
+  `grade` varchar(32) DEFAULT NULL,
+  `examtype` varchar(32) DEFAULT NULL,
+  `adm` varchar(16) DEFAULT NULL,
+  `ts` datetime DEFAULT NULL,
+  `val` int(11) DEFAULT '0',
+  `gp` float DEFAULT '0',
+  `credit` tinyint(4) DEFAULT '0',
+  `grading` varchar(32) DEFAULT NULL,
+  `gradingtype` tinyint(4) DEFAULT '0',
+  `isfail` tinyint(4) DEFAULT '0',
+  `kkm` varchar(12) DEFAULT NULL,
+  `idx` int(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `year` (`year`),
+  KEY `sch_id` (`sch_id`),
+  KEY `cls_code` (`cls_code`),
+  KEY `stu_uid` (`stu_uid`),
+  KEY `sub_code` (`sub_code`),
+  KEY `grade` (`grade`),
+  KEY `examtype` (`examtype`),
+  KEY `point` (`point`),
+  KEY `cls_level` (`cls_level`),
+  KEY `sub_grp` (`sub_grp`),
+  KEY `sub_type` (`sub_type`),
+  KEY `gp` (`gp`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+// old
+
+CREATE TABLE IF NOT EXISTS `hafaz_construct` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `sid` tinyint(6) DEFAULT '0',
+  `type` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cate` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `item` varchar(128) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `lvl` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `exam` varchar(48) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `adm` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ts` datetime DEFAULT NULL,
+  `isdel` tinyint(4) DEFAULT '0',
+  `delby` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `delts` datetime DEFAULT NULL,
+  `grading` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+ALTER TABLE `surah_stu_read` ADD `year` VARCHAR( 32 ) NULL AFTER `ts` ;
+ALTER TABLE `surah_stu_status` CHANGE `year` `year` VARCHAR( 32 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL ;
+ALTER TABLE `exam_stu_summary` CHANGE `msg` `msg` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ;

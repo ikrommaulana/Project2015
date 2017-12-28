@@ -1,0 +1,83 @@
+FEE REMINDER
+BI
+----------------------------------------------------------------------------------------------------------------------------------
+ 
+
+arikh : {system_date}
+
+Assalamualaikum wbt
+
+Tuan/Puan/Dato/Datin : {father_name}
+{address}
+{poscode} {city}
+{state}
+
+Tuan/Puan/Dato/Datin,
+
+TUNGGAKAN SEMASA YURAN PELAJAR : {student_name}
+
+Perkara di atas adalah dengan segala hormatnya dirujuk.
+
+2. Dimaklumkan bahawa tunggakan yuran untuk anak/jagaan tuan bernama {student_name} adalah seperti berikut:-
+
+{content_report}
+
+
+5. Yuran ini hendaklah dijelaskan selewat-lewatnya (Tarikh) atau tindakan susulan akan diambil. Kerjasama yang diberikan amatlah kami hargai.
+ 
+
+Sekian, Terima Kasih.
+ 
+
+  
+Yang benar,
+Pengetua
+{school_name}
+
+
+ 
+
+**SILA LAPORKAN JIKA BAYARAN TELAH DIBUAT. KESULITAN AMATLAH DIKESALI. TERIMA KASIH. 
+--THIS IS COMPUTER GENERATED--
+
+ 
+
+
+BM
+-----------------------------------------------------------------------------------------------------------------------------------
+Tarikh : {system_date}
+
+Assalamualaikum wbt
+
+Tuan/Puan/Dato/Datin : {father_name}
+{address}
+{poscode} {city}
+{state}
+
+Tuan/Puan/Dato/Datin,
+
+TUNGGAKAN SEMASA YURAN PELAJAR : {student_name}
+
+Perkara di atas adalah dengan segala hormatnya dirujuk.
+
+2. Dimaklumkan bahawa tunggakan yuran untuk anak/jagaan tuan bernama {student_name} adalah seperti berikut:-
+
+{content_report}
+
+
+5. Yuran ini hendaklah dijelaskan selewat-lewatnya (Tarikh) atau tindakan susulan akan diambil. Kerjasama yang diberikan amatlah kami hargai.
+ 
+
+Sekian, Terima Kasih.
+ 
+
+  
+Yang benar,
+Pengetua
+{school_name}
+
+
+ 
+
+**SILA LAPORKAN JIKA BAYARAN TELAH DIBUAT. KESULITAN AMATLAH DIKESALI. TERIMA KASIH. 
+--THIS IS COMPUTER GENERATED--

@@ -1,0 +1,2 @@
+// 13-02-2013
+ALTER TABLE `hwork_stu` ADD `verifydt` DATE NULL AFTER `submitdt`;

@@ -1,0 +1,59 @@
+//30-06-12
+CREATE TABLE `hwork` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt` date,
+  `uid` varchar(16) NOT NULL,
+  `sid` varchar(8),
+  `cls` varchar(8),
+  `sub` varchar(8),
+  `subname` varchar(32),
+  `year` varchar(5),
+  `due` date,
+  `des` varchar(128),
+  `ms` varchar(8),
+  `type` varchar(32),
+  `book` varchar(32),
+  `mark` int default 0,
+  `adm` varchar(16),
+  `ts` datetime,
+  PRIMARY KEY (`id`),
+  index(sid),
+  index(cls),
+  index(sub),
+  index(uid),
+  index(year)
+);
+
+CREATE TABLE `hwork_book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt` date,
+  `uid` varchar(16) NOT NULL,
+  `sid` varchar(8),
+  `subcode` varchar(32),
+  `subname` varchar(32),
+  `book` varchar(32),
+  `adm` varchar(16),
+  `ts` datetime,
+  PRIMARY KEY (`id`),
+  index(sid),
+  index(uid)
+);
+CREATE TABLE `hwork_stu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt` date,
+  `uid` varchar(16) NOT NULL,
+  `sid` varchar(8),
+  `xid` bigint default 0,
+  `sta` tinyint default 0,
+  `mark` float default 0,
+  `submitdt` date,
+  `adm` varchar(16),
+  `ts` datetime,
+  PRIMARY KEY (`id`),
+  index(sid),
+  index(uid),
+  index(xid)
+);
+
+
+

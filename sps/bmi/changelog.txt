@@ -1,0 +1,28 @@
+//30-06-12
+
+CREATE TABLE `bmi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt` date,
+  `uid` varchar(16) NOT NULL,
+  `sid` varchar(8),
+  `cls` varchar(8),
+  `lvl` varchar(8),
+  `mon` varchar(3),
+  `year` varchar(5),
+  `cm` float default 0,
+  `kg` float default 0,
+  `bmi` float default 0,
+  `adm` varchar(16),
+  `ts` datetime,
+  PRIMARY KEY (`id`),
+  index(sid),
+  index(cls),
+  index(lvl),
+  index(uid),
+  index(mon),
+  index(year),
+  index(bmi)
+);
+
+
+

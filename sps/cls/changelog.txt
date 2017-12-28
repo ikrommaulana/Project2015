@@ -1,0 +1,4 @@
+// 19-03-2013
+// cls level A/B
+
+ALTER TABLE `cls` CHANGE `level` `level` VARCHAR( 4 ) NULL

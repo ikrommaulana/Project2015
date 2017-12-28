@@ -1,0 +1,3 @@
+// 20-03-2013
+
+ALTER TABLE `stu` ADD `nisn` VARCHAR( 16 ) NULL AFTER `ses_cls_id` 

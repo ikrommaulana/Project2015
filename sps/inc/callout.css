@@ -1,0 +1,121 @@
+	.calloutUp
+    {
+        height: 0;
+        width: 0;
+        border-bottom: 12px solid #ffffff;
+        border-left: 12px dotted transparent;
+        border-right: 12px dotted transparent;
+        left: 0px;
+        top: 0px;
+        margin-left: 20px;
+        z-index: 10;
+    }
+    .calloutUp2
+    {
+        position: relative;
+        left: -10px;
+        top: 2px;
+        height: 0;
+        width: 0;
+        border-bottom: 10px solid #9999ff;
+        border-left: 10px dotted transparent;
+        border-right: 10px dotted transparent;
+        z-index: 11;
+    }
+    .calloutDown
+    {
+        height: 0;
+        width: 0;
+        border-top: 12px solid #ffffff;
+        border-left: 12px dotted transparent;
+        border-right: 12px dotted transparent;
+        left: 0px;
+        top: 0px;
+        margin-left: 20px;
+        z-index: 11;
+    }
+    .calloutDown2
+    {
+        position: relative;
+        left: -10px;
+        top: -12px;
+        height: 0;
+        width: 0;
+        border-top: 10px solid #9999ff;
+        border-left: 10px dotted transparent;
+        border-right: 10px dotted transparent;
+        z-index: 10;
+    }
+    .divContainerUp
+    {
+        background-color: #9999ff;
+        border: solid 1px #ffffff;
+        position: relative;
+        top: -1px;
+        z-index: 9;
+        width:98%;
+        padding: 4px;
+    }
+    .divContainerDown
+    {
+        background-color: #9999ff;
+        border: solid 1px #ffffff;
+        position: relative;
+        top: 1px;
+        z-index: 3;
+        width: 98%;
+        padding: 4px;
+    }
+    .divContainerMain
+    {
+        /**background-color: #ccccff;**/
+        padding: 8px;
+		width:95%;
+    }
+/**
+http://www.dailycoding.com/Posts/purely_css_callouts.aspx
+
+Sample HTML 
+
+<div class="divContainerMain">
+    <h3>
+        Up Side Callout</h3>
+    <div>
+        <a href="#">Ramesh Soni</a> Said</div>
+    <div class="calloutUp">
+        <div class="calloutUp2">
+        </div>
+    </div>
+    <div class="divContainerUp">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam dignissim tincidunt
+        turpis. Mauris pede. Vestibulum gravida magna id nibh. In nec urna. Sed ut purus.
+        Duis sit amet lacus ornare massa mattis consequat. Donec nec tellus. Nam quis nulla
+        viverra diam faucibus dictum. Nulla facilisi. Donec sit amet dolor at sapien accumsan
+        consectetuer.
+    </div>
+    <br />
+    <br />
+    <h3>
+        Down Side Callout</h3>
+    <div class="divContainerDown">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam dignissim tincidunt
+        turpis. Mauris pede. Vestibulum gravida magna id nibh. In nec urna. Sed ut purus.
+        Duis sit amet lacus ornare massa mattis consequat. Donec nec tellus. Nam quis nulla
+        viverra diam faucibus dictum. Nulla facilisi. Donec sit amet dolor at sapien accumsan
+        consectetuer.
+    </div>
+    <div class="calloutDown">
+        <div class="calloutDown2">
+        </div>
+    </div>
+    <div>
+        <a href="#">Ramesh Soni</a> Said</div>
+</div>
+
+
+
+
+
+
+
+**/

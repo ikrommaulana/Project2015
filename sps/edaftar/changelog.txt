@@ -1,0 +1,62 @@
+alter table stureg_akademik modify s1 varchar(128);
+alter table stureg_akademik modify s2 varchar(128);
+alter table stureg_akademik modify s3 varchar(128);
+alter table stureg_akademik modify s4 varchar(128);
+alter table stureg_akademik modify s5 varchar(128);
+alter table stureg_akademik modify s6 varchar(128);
+alter table stureg_akademik modify s7 varchar(128);
+alter table stureg_akademik modify s8 varchar(128);
+alter table stureg_akademik modify s9 varchar(128);
+alter table stureg_akademik modify s10 varchar(128);
+alter table stureg_akademik modify s11 varchar(128);
+alter table stureg_akademik modify s12 varchar(128);
+alter table stureg_akademik modify s13 varchar(128);
+alter table stureg_akademik modify s14 varchar(128);
+alter table stureg_akademik modify s15 varchar(128);
+alter table stureg_akademik modify s16 varchar(128);
+
+//120624
+alter table stureg add addr1 varchar(48);
+alter table stureg add addr2 varchar(48);
+alter table stureg add isdelete tinyint default 0;
+update stureg set p1sal=replace(p1sal,'RM','');
+update stureg set p2sal=replace(p2sal,'RM','');
+update stureg set p1sal=replace(p1sal,',','');
+update stureg set p2sal=replace(p2sal,',','');
+alter table stureg add totalsal float default 0;
+update stureg set totalsal=p1sal+p2sal;
+
+//111130
+alter table stureg add ispprt tinyint default 0;
+alter table stureg add isibu tinyint default 0;
+alter table stureg add isyatim tinyint default 0;
+alter table stureg add tarikhtemuduga varchar(32);
+alter table stureg add israyu tinyint default 0;
+alter table stureg add sid1 tinyint default 0;
+update stureg set sid1=sch_id;
+
+
+//6.0.0
+alter table stureg add daerah varchar(32);
+alter table stureg add sid1 tinyint default 0; 
+alter table stureg add sid2 tinyint default 0;
+alter table stureg add sid3 tinyint default 0;
+alter table stureg add isforen tinyint default 0;
+alter table stureg add isnew tinyint default 1;
+
+//5.8.0
+alter table letter add name varchar(32) after type;
+alter table letter add header tinyint default 0;
+alter table letter add isheader tinyint default 0;
+alter table letter add sid tinyint default 0;
+
+
+update stu,stureg set stu.bandar=stureg.bandar,stu.poskod=stureg.poskod,stu.bstate=stureg.bstate where stu.ic=stureg.ic;
+
+alter table stureg add cls_level tinyint default 1;
+alter table stureg add isadminreg tinyint default 0;
+alter table stureg add sesyear int default 0;
+alter table stureg add nosb varchar(18);
+
+
+

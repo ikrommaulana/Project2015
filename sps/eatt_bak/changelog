@@ -1,0 +1,8 @@
+ALTER TABLE stuatt
+ADD COLUMN `daytype` varchar(16) NOT NULL,
+ADD COLUMN `att_in` varchar(12) NOT NULL,
+ADD COLUMN `att_out` varchar(12) NOT NULL,
+ADD COLUMN `upd_att` datetime NOT NULL,
+ADD COLUMN `usr_grp` tinyint(4) NOT NULL,
+ADD COLUMN `ot` varchar(12) NOT NULL,
+ADD COLUMN `short` varchar(12) NOT NULL;

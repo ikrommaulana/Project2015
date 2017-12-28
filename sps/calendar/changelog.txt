@@ -1,0 +1,6 @@
+alter table calendar_event add isreminder tinyint default 0;
+alter table calendar_event add isprivate  tinyint default 0;
+
+
+INI
+CALENDAR_GLOBAL=1;

@@ -1,0 +1,62 @@
+version 5.8
+//make sure update payment yuran
+alter table feetrans add sessionid varchar(48) unique;
+update feetrans set sessionid=id;
+
+version 6
+//111201
+
+//SET BULAN kat paramenter yuran.. yuran Tahunan bulan set 0.. CODE=0 
+//new yuran
+feeout.php
+feepay_v1.php
+feecfg_v1.php
+
+
+alter table feestu add cod varchar(8);
+alter table feestu add mon tinyint default 0;
+
+select * from type where  grp='yuran' and code='';
+update type set code='0' where  grp='yuran' and code='';
+update feepay,type set feepay.item_code=type.etc where feepay.fee=type.prm and type.grp='yuran';
+update feestu,type set feestu.cod=type.etc where feestu.fee=type.prm and type.grp='yuran';
+update feestu,type set feestu.typ=type.val where feestu.fee=type.prm and type.grp='yuran';
+update feestu,type set feestu.mon=type.code where feestu.fee=type.prm and type.grp='yuran';
+
+
+alter table stu add intake int default 0;
+update stu,ses_stu set intake='2007' where stu.uid=ses_stu.stu_uid and ses_stu.year='2007' and intake=0;
+update stu,ses_stu set intake='2008' where stu.uid=ses_stu.stu_uid and ses_stu.year='2008' and intake=0;
+update stu,ses_stu set intake='2009' where stu.uid=ses_stu.stu_uid and ses_stu.year='2009' and intake=0;
+update stu,ses_stu set intake='2010' where stu.uid=ses_stu.stu_uid and ses_stu.year='2010' and intake=0;
+update stu,ses_stu set intake='2011' where stu.uid=ses_stu.stu_uid and ses_stu.year='2011' and intake=0;
+update stu,ses_stu set intake='2012' where stu.uid=ses_stu.stu_uid and ses_stu.year='2012' and intake=0;
+
+alter table type modify des varchar(1000);
+
+//120615
+alter table feetrans add deletets datetime;
+alter table feetrans add deleterem varchar(48);
+
+feestu
+index (mon),
+index (cod),
+index (val),
+index (pdt),
+index (rno),
+index (resitno)
+
+feepay
+index(isdelete),
+index(tyep),
+index(tid),
+index(fee),
+index(stu_uid),
+index(sch_id),
+index(year),
+index(resitno),
+index(acc)
+
+
+
+

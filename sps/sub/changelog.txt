@@ -1,0 +1,7 @@
+// 26-03-2013
+
+ALTER TABLE `sub` CHANGE `idx` `idx` INT( 4 ) NULL DEFAULT NULL 
+
+// 19-03-2013
+// level a/b
+ALTER TABLE `sub` CHANGE `level` `level` VARCHAR( 4 ) NULL 

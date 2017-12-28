@@ -1,0 +1,14 @@
+//120812
+insert into type (grp,prm,val)values('usrstatus','Active',0);
+insert into type (grp,prm,val)values('usrstatus','Resigned',1);
+insert into type (grp,prm,val)values('usrstatus','Retired',2);
+insert into type (grp,prm,val)values('usrstatus','Suspended',3);
+
+//120116
+alter table usr add city varchar(32);
+alter table usr add pcode varchar(32);
+alter table usr add addr1 varchar(48);
+alter table usr add addr2 varchar(48);
+alter table usr add spname varchar(48);
+alter table usr add spic varchar(16);
+alter table usr add spjob varchar(32);
